@@ -1,0 +1,14 @@
+/*
+ strings.strings
+ Helligkeit
+ 
+ Created by Finn Gaida on 17.12.13.
+ Copyright (c) 2013 Finn Gaida. All rights reserved.
+ */
+
+"Hi! Danke, dass du \"Helligkeit\" runtergeladen hast. So geht's:" = "Hey, thanks for downloading \"Brightness\"! This is how it works:";
+"Ziehen sie den Kreis hoch und runter um die Helligkeit einzustellen." = "Drag this circle up and down to set the brightness manually";
+"Tippen sie auf den Kreis um den Hoch, /-Tiefpunkt zu erreichen."
+= "Tap it to automatically jump to the maximum/minimum.";
+"Das wars! Viel Spaß mit Helligkeit und folgenden Updates!" =
+"That's it! Enjoy.";
