@@ -54,8 +54,9 @@
     [bg addSubview:info];
     
     // todo ios 6 check
-    if ([self ios7])
+    if ([self ios7]) {
         animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
+    }
     showingInfo = NO;
 }
 
@@ -69,7 +70,7 @@
     scroller.contentSize = CGSizeMake(320, 500);
     [bgInfo addSubview:scroller];
     
-    UILabel *sample = [[UILabel alloc] initWithFrame:CGRectMake(20, 100, 280, 50)];
+    UILabel *sample = [[UILabel alloc] initWithFrame:CGRectMake(20, 90, 280, 50)];
     sample.backgroundColor = [UIColor clearColor];
     sample.textColor = [UIColor whiteColor];
     sample.textAlignment = NSTextAlignmentCenter;
@@ -77,17 +78,17 @@
     sample.text = NSLocalizedString(@"Made by Finn", nil);
     [scroller addSubview:sample];
     
-    UILabel *sample2 = [[UILabel alloc] initWithFrame:CGRectMake(40, 150, 240, 350)];
+    UILabel *sample2 = [[UILabel alloc] initWithFrame:CGRectMake(40, 140, 240, 300)];
     sample2.backgroundColor = [UIColor clearColor];
     sample2.textColor = [UIColor whiteColor];
     sample2.textAlignment = NSTextAlignmentLeft;
-    sample2.font = [UIFont fontWithName:@"Helvetica" size:15];
-    sample2.text = NSLocalizedString(@"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.", nil);
+    sample2.font = [UIFont fontWithName:@"Helvetica" size:17];
+    sample2.text = NSLocalizedString(@"I'm just an ordinary 16-year-old app developer from Germany. I go to school, play hockey and surf the web by day and code useful tools for iPhones and iPod Touches from all over at night. I am available for your satifaction via \n\n (mail button) \n\n\n If you want more, go check out \n (SunUp and finngaida.de)", nil);
     sample2.numberOfLines = 0;
     [scroller addSubview:sample2];
     
     
-    if ([self ios7] && !showingInfo) {
+    if ([self ios7]) {
 /*        UIGravityBehavior *gravity = [[UIGravityBehavior alloc] initWithItems:@[bg]];
         gravity.gravityDirection = CGVectorMake(0, -1);
         [animator addBehavior:gravity];
@@ -106,18 +107,55 @@
         
         [animator removeAllBehaviors];
         
-        UISnapBehavior *snap = [[UISnapBehavior alloc] initWithItem:bg snapToPoint:CGPointMake(159, -self.view.frame.size.height/2+64)];
-        [animator addBehavior:snap];
+        if (showingInfo) {
+            UISnapBehavior *snap = [[UISnapBehavior alloc] initWithItem:bg snapToPoint:CGPointMake(160, self.view.frame.size.height/2)];
+            [animator addBehavior:snap];
+            
+            showingInfo = NO;
+        } else {
+            UISnapBehavior *snap = [[UISnapBehavior alloc] initWithItem:bg snapToPoint:CGPointMake(159, -self.view.frame.size.height/2+64)];
+            [animator addBehavior:snap];
         
-        showingInfo = YES;
-    } else if ([self ios7] && showingInfo) {
-        
-        [animator removeAllBehaviors];
-        
-        UISnapBehavior *snap = [[UISnapBehavior alloc] initWithItem:bg snapToPoint:CGPointMake(160, self.view.frame.size.height/2)];
-        [animator addBehavior:snap];
-        
-        showingInfo = NO;
+            showingInfo = YES;
+        }
+    } else {
+        if (showingInfo) {
+            
+            [UIView animateWithDuration:.5 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+                bg.center = CGPointMake(160, self.view.frame.size.height/2+20);
+            } completion:^(BOOL finished) {
+                [UIView animateWithDuration:.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+                    bg.center = CGPointMake(160, self.view.frame.size.height/2-10);
+                } completion:^(BOOL finished) {
+                    [UIView animateWithDuration:.2 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+                        bg.center = CGPointMake(160, self.view.frame.size.height/2);
+                    } completion:^(BOOL finished) {
+                        
+                    }];
+                }];
+            }];
+            
+            showingInfo = NO;
+            
+        } else {
+            
+            [UIView animateWithDuration:.5 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+                bg.center = CGPointMake(160, -self.view.frame.size.height/2+44);
+            } completion:^(BOOL finished) {
+                [UIView animateWithDuration:.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+                    bg.center = CGPointMake(160, -self.view.frame.size.height/2+74);
+                } completion:^(BOOL finished) {
+                    [UIView animateWithDuration:.2 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+                        bg.center = CGPointMake(160, -self.view.frame.size.height/2+64);
+                    } completion:^(BOOL finished) {
+                        
+                    }];
+                }];
+            }];
+            
+            showingInfo = YES;
+            
+        }
     }
 }
 
