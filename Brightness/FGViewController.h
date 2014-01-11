@@ -22,6 +22,9 @@ typedef enum {
     CGFloat startVolume;
     
     FGWalkthrough *walkthrough;
+    
+    UIDynamicAnimator *animator;
+    BOOL showingInfo;
 }
 
 @property CGPoint mid;

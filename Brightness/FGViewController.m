@@ -46,6 +46,83 @@
     // update
     NSTimer *rpt = [NSTimer timerWithTimeInterval:.1 target:self selector:@selector(upd) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:rpt forMode:NSRunLoopCommonModes];
+    
+    // info button
+    UIButton *info = [UIButton buttonWithType:UIButtonTypeInfoDark];
+    info.frame = CGRectMake(280, self.view.frame.size.height-40, 40, 40);
+    [info addTarget:self action:@selector(showInfoScreen:) forControlEvents:UIControlEventTouchUpInside];
+    [bg addSubview:info];
+    
+    // todo ios 6 check
+    if ([self ios7])
+        animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
+    showingInfo = NO;
+}
+
+- (void)showInfoScreen:(BOOL)animated {
+    
+    UIView *bgInfo = [[UIView alloc] initWithFrame:self.view.frame];
+    bgInfo.backgroundColor = [UIColor colorWithWhite:.3 alpha:1];
+    [self.view insertSubview:bgInfo atIndex:0];
+    
+    UIScrollView *scroller = [[UIScrollView alloc] initWithFrame:bgInfo.frame];
+    scroller.contentSize = CGSizeMake(320, 500);
+    [bgInfo addSubview:scroller];
+    
+    UILabel *sample = [[UILabel alloc] initWithFrame:CGRectMake(20, 100, 280, 50)];
+    sample.backgroundColor = [UIColor clearColor];
+    sample.textColor = [UIColor whiteColor];
+    sample.textAlignment = NSTextAlignmentCenter;
+    sample.font = [UIFont fontWithName:@"Helvetica" size:30];
+    sample.text = NSLocalizedString(@"Made by Finn", nil);
+    [scroller addSubview:sample];
+    
+    UILabel *sample2 = [[UILabel alloc] initWithFrame:CGRectMake(40, 150, 240, 350)];
+    sample2.backgroundColor = [UIColor clearColor];
+    sample2.textColor = [UIColor whiteColor];
+    sample2.textAlignment = NSTextAlignmentLeft;
+    sample2.font = [UIFont fontWithName:@"Helvetica" size:15];
+    sample2.text = NSLocalizedString(@"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.", nil);
+    sample2.numberOfLines = 0;
+    [scroller addSubview:sample2];
+    
+    
+    if ([self ios7] && !showingInfo) {
+/*        UIGravityBehavior *gravity = [[UIGravityBehavior alloc] initWithItems:@[bg]];
+        gravity.gravityDirection = CGVectorMake(0, -1);
+        [animator addBehavior:gravity];
+        
+        UIDynamicItemBehavior *item = [[UIDynamicItemBehavior alloc] initWithItems:@[bg]];
+        item.elasticity = .5;
+        [animator addBehavior:item];
+        
+        UIAttachmentBehavior *attach = [[UIAttachmentBehavior alloc] initWithItem:bg offsetFromCenter:UIOffsetMake(0, bg.frame.size.height/2) attachedToAnchor:CGPointMake(155, self.view.frame.size.height-200)];
+        [animator addBehavior:attach];
+        
+        UICollisionBehavior *collision = [[UICollisionBehavior alloc] initWithItems:@[bg]];
+        collision.translatesReferenceBoundsIntoBoundary = NO;
+        [collision addBoundaryWithIdentifier:@"Top" fromPoint:CGPointMake(-50, -self.view.frame.size.height+80) toPoint:CGPointMake(370, -self.view.frame.size.height+80)];
+        [animator addBehavior:collision];*/
+        
+        [animator removeAllBehaviors];
+        
+        UISnapBehavior *snap = [[UISnapBehavior alloc] initWithItem:bg snapToPoint:CGPointMake(159, -self.view.frame.size.height/2+64)];
+        [animator addBehavior:snap];
+        
+        showingInfo = YES;
+    } else if ([self ios7] && showingInfo) {
+        
+        [animator removeAllBehaviors];
+        
+        UISnapBehavior *snap = [[UISnapBehavior alloc] initWithItem:bg snapToPoint:CGPointMake(160, self.view.frame.size.height/2)];
+        [animator addBehavior:snap];
+        
+        showingInfo = NO;
+    }
+}
+
+- (BOOL)ios7 {
+    return ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7);
 }
 
 - (void)upd {
@@ -58,13 +135,13 @@
     volume.text = [NSString stringWithFormat:@"%.f%%", [UIScreen mainScreen].brightness*100];
     
     // Launch tutorial
-    //if ([[NSUserDefaults standardUserDefaults] boolForKey:@"kApplicationDidLaunchForTheVeryFirstTime"] == NO) {
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"kApplicationDidLaunchForTheVeryFirstTime"] == NO) {
     
         // Display FGWalkthrough
         walkthrough = [[FGWalkthrough alloc] initWithFrame:CGRectMake(0, 0, 320, 150)];
         [bg insertSubview:walkthrough atIndex:0];
     
-    //}
+    }
     
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"kApplicationDidLaunchForTheVeryFirstTime"];
 }

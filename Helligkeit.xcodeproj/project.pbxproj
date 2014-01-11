@@ -68,7 +68,7 @@
 		CC3778081860CAB900CC3A83 /* default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default@2x.png"; sourceTree = "<group>"; };
 		CC3778091860CAB900CC3A83 /* default~568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default~568h.png"; sourceTree = "<group>"; };
 		CC3FC0D6187F577A009D58C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		CC484E9A171709C1008D24F2 /* Helligkeit.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Helligkeit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC484E9A171709C1008D24F2 /* Helligkeit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Helligkeit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC484E9D171709C1008D24F2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CC484E9F171709C1008D24F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CC484EC017175438008D24F2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
