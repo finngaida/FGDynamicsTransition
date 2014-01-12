@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CC484E99171709C1008D24F2"
-               BuildableName = "Helligkeit.app"
+               BuildableName = "FGDynamicsTransition.app"
                BlueprintName = "FGDynamicsTransition"
                ReferencedContainer = "container:FGDynamicsTransition.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CC484E99171709C1008D24F2"
-            BuildableName = "Helligkeit.app"
+            BuildableName = "FGDynamicsTransition.app"
             BlueprintName = "FGDynamicsTransition"
             ReferencedContainer = "container:FGDynamicsTransition.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CC484E99171709C1008D24F2"
-            BuildableName = "Helligkeit.app"
+            BuildableName = "FGDynamicsTransition.app"
             BlueprintName = "FGDynamicsTransition"
             ReferencedContainer = "container:FGDynamicsTransition.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CC484E99171709C1008D24F2"
-            BuildableName = "Helligkeit.app"
+            BuildableName = "FGDynamicsTransition.app"
             BlueprintName = "FGDynamicsTransition"
             ReferencedContainer = "container:FGDynamicsTransition.xcodeproj">
          </BuildableReference>
