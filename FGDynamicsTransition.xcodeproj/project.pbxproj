@@ -1,0 +1,326 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC484E9E171709C1008D24F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC484E9D171709C1008D24F2 /* UIKit.framework */; };
+		CC484EA0171709C1008D24F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC484E9F171709C1008D24F2 /* Foundation.framework */; };
+		CC86BD80174369B00080C0A5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC86BD7F174369B00080C0A5 /* Default-568h@2x.png */; };
+		CCB6A2021882CF7200ECB172 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCB6A1F71882CF7200ECB172 /* MainStoryboard.storyboard */; };
+		CCB6A2031882CF7200ECB172 /* FGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB6A1FA1882CF7200ECB172 /* FGAppDelegate.m */; };
+		CCB6A2051882CF7200ECB172 /* FGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB6A1FE1882CF7200ECB172 /* FGViewController.m */; };
+		CCB6A2061882CF7200ECB172 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB6A1FF1882CF7200ECB172 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CC3788901881CDA5006ABA09 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		CC484E9A171709C1008D24F2 /* FGDynamicsTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FGDynamicsTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC484E9D171709C1008D24F2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CC484E9F171709C1008D24F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CC484EC017175438008D24F2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CC60E49A1881C12500875B93 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		CC86BD7F174369B00080C0A5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		CCB6A1F41882CF7200ECB172 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CCB6A1F61882CF7200ECB172 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/localization.strings; sourceTree = "<group>"; };
+		CCB6A1F81882CF7200ECB172 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		CCB6A1F91882CF7200ECB172 /* FGAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FGAppDelegate.h; path = FGDynamicsTransition/FGAppDelegate.h; sourceTree = "<group>"; };
+		CCB6A1FA1882CF7200ECB172 /* FGAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FGAppDelegate.m; path = FGDynamicsTransition/FGAppDelegate.m; sourceTree = "<group>"; };
+		CCB6A1FB1882CF7200ECB172 /* FGDynamicsTransition-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "FGDynamicsTransition-Info.plist"; sourceTree = "<group>"; };
+		CCB6A1FC1882CF7200ECB172 /* FGDynamicsTransition-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FGDynamicsTransition-Prefix.pch"; sourceTree = "<group>"; };
+		CCB6A1FD1882CF7200ECB172 /* FGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FGViewController.h; path = FGDynamicsTransition/FGViewController.h; sourceTree = "<group>"; };
+		CCB6A1FE1882CF7200ECB172 /* FGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FGViewController.m; path = FGDynamicsTransition/FGViewController.m; sourceTree = "<group>"; };
+		CCB6A1FF1882CF7200ECB172 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC484E97171709C1008D24F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC484E9E171709C1008D24F2 /* UIKit.framework in Frameworks */,
+				CC484EA0171709C1008D24F2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC484E91171709C1008D24F2 = {
+			isa = PBXGroup;
+			children = (
+				CCB6A1F91882CF7200ECB172 /* FGAppDelegate.h */,
+				CCB6A1FA1882CF7200ECB172 /* FGAppDelegate.m */,
+				CCB6A1FD1882CF7200ECB172 /* FGViewController.h */,
+				CCB6A1FE1882CF7200ECB172 /* FGViewController.m */,
+				CCB6A1F21882CF7200ECB172 /* FGDynamicsTransition */,
+				CC484E9C171709C1008D24F2 /* Frameworks */,
+				CC484E9B171709C1008D24F2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC484E9B171709C1008D24F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC484E9A171709C1008D24F2 /* FGDynamicsTransition.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC484E9C171709C1008D24F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC3788901881CDA5006ABA09 /* MessageUI.framework */,
+				CC60E49A1881C12500875B93 /* StoreKit.framework */,
+				CC484EC017175438008D24F2 /* QuartzCore.framework */,
+				CC484E9D171709C1008D24F2 /* UIKit.framework */,
+				CC484E9F171709C1008D24F2 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCB6A1F21882CF7200ECB172 /* FGDynamicsTransition */ = {
+			isa = PBXGroup;
+			children = (
+				CC86BD7F174369B00080C0A5 /* Default-568h@2x.png */,
+				CCB6A1F31882CF7200ECB172 /* InfoPlist.strings */,
+				CCB6A1F51882CF7200ECB172 /* localization.strings */,
+				CCB6A1F71882CF7200ECB172 /* MainStoryboard.storyboard */,
+				CCB6A1FB1882CF7200ECB172 /* FGDynamicsTransition-Info.plist */,
+				CCB6A1FC1882CF7200ECB172 /* FGDynamicsTransition-Prefix.pch */,
+				CCB6A1FF1882CF7200ECB172 /* main.m */,
+			);
+			path = FGDynamicsTransition;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC484E99171709C1008D24F2 /* FGDynamicsTransition */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC484EBD171709C1008D24F2 /* Build configuration list for PBXNativeTarget "FGDynamicsTransition" */;
+			buildPhases = (
+				CC484E96171709C1008D24F2 /* Sources */,
+				CC484E97171709C1008D24F2 /* Frameworks */,
+				CC484E98171709C1008D24F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FGDynamicsTransition;
+			productName = SunUp;
+			productReference = CC484E9A171709C1008D24F2 /* FGDynamicsTransition.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC484E92171709C1008D24F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FG;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Finn Gaida";
+			};
+			buildConfigurationList = CC484E95171709C1008D24F2 /* Build configuration list for PBXProject "FGDynamicsTransition" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				de,
+				Base,
+			);
+			mainGroup = CC484E91171709C1008D24F2;
+			productRefGroup = CC484E9B171709C1008D24F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC484E99171709C1008D24F2 /* FGDynamicsTransition */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC484E98171709C1008D24F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC86BD80174369B00080C0A5 /* Default-568h@2x.png in Resources */,
+				CCB6A2021882CF7200ECB172 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC484E96171709C1008D24F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCB6A2031882CF7200ECB172 /* FGAppDelegate.m in Sources */,
+				CCB6A2061882CF7200ECB172 /* main.m in Sources */,
+				CCB6A2051882CF7200ECB172 /* FGViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CCB6A1F31882CF7200ECB172 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCB6A1F41882CF7200ECB172 /* Base */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CCB6A1F51882CF7200ECB172 /* localization.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCB6A1F61882CF7200ECB172 /* Base */,
+			);
+			name = localization.strings;
+			sourceTree = "<group>";
+		};
+		CCB6A1F71882CF7200ECB172 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCB6A1F81882CF7200ECB172 /* Base */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC484EBB171709C1008D24F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Holger Gaida (A3EKSKX6E5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Holger Gaida (A3EKSKX6E5)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "299A4CFC-16B7-401A-98C8-825D17F3DB02";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "299A4CFC-16B7-401A-98C8-825D17F3DB02";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CC484EBC171709C1008D24F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Holger Gaida (A3EKSKX6E5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Holger Gaida (A3EKSKX6E5)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "299A4CFC-16B7-401A-98C8-825D17F3DB02";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "299A4CFC-16B7-401A-98C8-825D17F3DB02";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC484EBE171709C1008D24F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FGDynamicsTransition/FGDynamicsTransition-Prefix.pch";
+				INFOPLIST_FILE = "FGDynamicsTransition/FGDynamicsTransition-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = FGDynamicsTransition;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CC484EBF171709C1008D24F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FGDynamicsTransition/FGDynamicsTransition-Prefix.pch";
+				INFOPLIST_FILE = "FGDynamicsTransition/FGDynamicsTransition-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = FGDynamicsTransition;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC484E95171709C1008D24F2 /* Build configuration list for PBXProject "FGDynamicsTransition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC484EBB171709C1008D24F2 /* Debug */,
+				CC484EBC171709C1008D24F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC484EBD171709C1008D24F2 /* Build configuration list for PBXNativeTarget "FGDynamicsTransition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC484EBE171709C1008D24F2 /* Debug */,
+				CC484EBF171709C1008D24F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC484E92171709C1008D24F2 /* Project object */;
+}
